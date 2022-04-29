@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>Simple Add,update And Delete Rows From HTML Table Dynamically</title>
+<script src="YourProjectfoldername/1.12.4/jquery.min.js"></script>
+</head>
+<body class="dyn-data">
+	<caption>Simple Example Update Rows and Colm. FROM HTML table Dynamically</caption>
+	<table class="table data" id="newtabledataComplet" border="3">
+		<thead class="focus">
+			<tr>
+				<th>Project Name</th>
+				<th>Project Language</th>
+				<th>Project Databased</th>
+				<th>Project Script</th>
+				<th>Project Programming</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Laravel - demo</td>
+				<td>PHP - example</td>
+				<td>MySQL - tutorilaspoint</td>
+				<td>mysqli - download</td>
+				<td>Javascript - learn step by step</td>
+			</tr>
+			<tr>
+				<td>Java - step by step</td>
+				<td>BASIC c</td>
+				<td>simple c++</td>
+				<td>steps c#</td>
+				<td>describe Oracle</td>
+			</tr>
+			<tr>
+				<td>Learn Mean.js step by step</td>
+				<td>demo - Android</td>
+				<td>IOS - Example step by step</td>
+				<td>Magento Master Learn step by step</td>
+				<td>HTML - Example</td>
+			</tr>
+		</tbody>
+	</table>
+	<script>
+	$('td').on('click', function() { // td double click to change
+		var $this = $(this);       //select column
+		var $input = $('<input>', { // double click to change value
+			value: $this.text(), //select this value
+			type: 'text',		 //Like string,json,array datatype defined
+			blur: function() { //blur function call
+			   $this.text(this.value); // onblur function to change and save
+			},
+			keyup: function(e) { 
+			   if (e.which === 13) $input.blur(); // tab or enter press to update
+			}
+		}).appendTo( $this.empty() ).focus(); // empty so focus
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "resourceName": {
+      "value": "himanshu"
+    },
+    "location": {
+      "value": "West US"
+    },
+    "dnsPrefix": {
+      "value": "docker"
+    },
+    "osDiskSizeGB": {
+      "value": 40
+    },
+    "kubernetesVersion": {
+      "value": "1.23.3"
+    },
+    "networkPlugin": {
+      "value": "azure"
+    },
+    "enableRBAC": {
+      "value": true
+    },
+    "vmssNodePool": {
+      "value": null
+    },
+    "windowsProfile": {
+      "value": null
+    },
+    "enablePrivateCluster": {
+      "value": null
+    },
+    "enableHttpApplicationRouting": {
+      "value": true
+    },
+    "enableAzurePolicy": {
+      "value": null
+    },
+    "enableSecretStoreCSIDriver": {
+      "value": null
+    }
+  }
+}
